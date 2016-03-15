@@ -1,0 +1,49 @@
+/* This file will hold styles that are loaded using the same media query as the wide grid. */
+
+
+
+/*----- CONTENT -----*/
+#block-system-main{
+	.content-wrapper{
+		background-position: 830px 0;
+	}
+}
+
+/*---RIGHT COLUMN WIDTH---*/
+section#section-content {
+  #zone-content{
+    .ds-right{
+	    width: 335px;
+    }
+  }
+}
+#region-content{
+  .view-bellisimo-projects {
+    .views-row,	 
+    .views-row:nth-child(3n){
+      margin: 0 0 40px 5% !important;
+    }
+  }
+}
+
+/*----- Project Views -----*/
+.page-taxonomy-term{
+  .region-content{
+	  .node-projects,
+    #region-content{ 
+      .view-projects{
+        .views-row{
+	        margin: 0 0 40px 20px;
+	      }
+	    }
+	  }    
+  } 
+}
+#region-content{
+  .view-projects{
+	  .views-row:nth-child(3n){
+      margin: 0 0 40px 20px;	
+    }
+  }
+}    
+

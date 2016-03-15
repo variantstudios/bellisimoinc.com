@@ -1,0 +1,56 @@
+/*----- HEADER -----*/
+#zone-header-wrapper { background: #fff; /* IE 8 */ -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)"; /* IE 5-7 */ filter: alpha(opacity=90); padding: 0 0 20px 0; }
+#zone-header-wrapper ul.nice-menu { overflow: visible; }
+#zone-header-wrapper ul.nice-menu li { float: left; }
+
+.ie7 #zone-header-wrapper { display: inline; }
+.ie7 #zone-header-wrapper #zone-header { padding: 0 0 20px 0; border-bottom: #9E032B solid 5px; }
+
+/*----- BODY -----*/
+.ds-header { width: 900px; margin: 0 0 0 -10px; padding: 0; }
+
+.content-wrapper { width: 920px; }
+.content-wrapper .ds-left { width: 550px; float: left; }
+.content-wrapper .ds-right { width: 260px; float: right; margin: 0 0 0 30px; }
+.content-wrapper .ds-right .view-recent-projects-slider { padding: 30px 0 0 0; }
+.content-wrapper .ds-right .view-recent-projects-slider a { text-decoration: none; }
+
+section#section-content #zone-content .ds-right { padding: 30px 0 0 0; }
+
+/*IE 8 ocverrides for layout widths and floating*/
+.ie8 .content-wrapper { clear: both; }
+.ie8 .content-wrapper .ds-left { display: inline-block; float: left; width: 600px; }
+.ie8 .content-wrapper .ds-right { display: inline-block; float: none; }
+
+/*.ie8 section#section-content #zone-content .ds-right{
+	padding: 30px 0 0 0;
+	position: absolute; 
+	top:75px;
+	right: 10px;
+}*/
+#block-system-main .content-wrapper { background: url("../images/content-border.png") repeat-y; background-position: 620px 0; }
+
+/*TEAM*/
+.view-team .views-row { width: 425px; float: left; margin: 0 30px 20px 0; }
+
+/*TAXONOMY TERM*/
+.view-taxonomy-term .view-content { margin: 20px 0 0 0; }
+
+/*----- FLEXSLIDER -----*/
+.flex-caption { position: relative; }
+
+/*----- FOOTER ------*/
+#region-footer-first .block { text-align: left; }
+
+#region-footer-second .site-by { float: right; }
+#region-footer-second .site-by span { float: left; display: block; }
+#region-footer-second .site-by a { float: right; display: block; }
+
+/*WEBFORM*/
+form label { text-align: left; float: left !important; clear: both; }
+
+#webform-client-form-18 input[type="submit"] { margin: 0; }
+
+.ie8 form label { text-align: left; float: left; clear: both; }
+.ie8 form .description, .ie8 form .form-actions { margin: 0 0 0 120px; }
+.ie8 #webform-client-form-18 { margin: 0 0 0 40px; }

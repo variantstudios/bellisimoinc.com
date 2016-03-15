@@ -1,0 +1,99 @@
+<?php
+// $Id: vs_site_copyright.module Exp $
+
+/**
+ * Implements hook_form_alter()
+ */
+
+ 
+function vs_site_copyright_form_alter(&$form, &$form_state, $form_id) {
+  switch($form_id) {
+    // Adds new location fields to the Site Information page for themes
+    case 'system_site_information_settings':
+      $form['site_copyright'] = array(
+        '#type' => 'fieldset',
+        '#title' => t('Site Copyright Info'),
+      );
+		  $form['site_copyright']['site_copyright_name'] = array(
+		    '#type' => 'textfield',
+		    '#title' => t('Company Name'),
+		    '#description' => t('Provide your official company name to be placed in the footer.'),
+		    '#default_value' => variable_get('site_copyright_name'),
+		  );
+    break;
+  }
+}
+
+/**
+ * Implements hook_preprocess_page()
+ * 
+ * Adds new fields to the page template for rendering
+ */
+function vs_site_copyright_preprocess_page(&$variables) {
+  $site_name = variable_get('site_name');
+  $copyrightname = variable_get('site_copyright_name');
+  
+  
+	$variables['copyright_name'] = t('<a href="@url" target="_blank" class="linkedin">@site_name Linkedin</a>', array(
+    '@url' => $copyrightname,
+    '@site_name' => $site_name,
+  ));
+  
+
+  
+  // Creates boolean for each of the site_copyright links
+  $variables['copyrightname'] = !empty($copyrightname) ? TRUE : FALSE;
+  
+  // Creates a boolean if no site_copyright links are filled out
+  if(empty($copyrightname)) {
+    $variables['has_site_copyright'] = FALSE;
+  }
+  else {
+    $variables['has_site_copyright'] = TRUE;
+  }
+}
+
+
+ 
+/**
+ * Implementation of hook_block_info().
+ */
+function vs_site_copyright_block_info() {
+  $blocks['my-block-id'] = array(
+    'info' => t('Website Copyright'),
+  );
+  return $blocks;
+}
+ 
+/**
+ * Implementation of hook_block_view().
+ */
+function vs_site_copyright_block_view($delta='') {
+  $block = array();
+  switch ($delta) {
+    case 'my-block-id':
+      $block['subject'] = t('Website Copyright');
+      $block['content'] = vs_site_copyright_contents();
+      break;
+  }
+  return $block;
+}
+ 
+/**
+ * custom html block
+ * @return string
+ */
+function vs_site_copyright_contents() {
+$copyrightname = variable_get('site_copyright_name');
+$currentyear = date("Y");
+ return
+   
+$variables['copyright_name'] =  t('&copy; @name @year All Rights Reserved.', array(
+    '@name' => $copyrightname,
+    '@year' => $currentyear,
+  ));
+  
+  }
+
+
+

@@ -1,0 +1,99 @@
+/* This file will hold styles that are loaded using the same media query as the narrow grid. */
+/* If you are using the default media queries provided by Omega, these styles will also
+ *  apply to the normal and widescreen layouts. You may override these styles in the normal 
+ *  and widescreen CSS files as appropriate. */
+ 
+/*----- MENU -----*/ 
+ul.nice-menu {
+  li{
+  	span { font-size: 18px; }
+	  a{
+      font-size: 18px;
+    }
+    ul{
+	  margin: 10px 0 0 0;	
+    }
+  }
+}
+
+/*----- CONTENT -----*/
+#block-system-main{
+	.content-wrapper{
+		background-position: 667px 0;
+	}
+}
+section#section-content {
+  #zone-content{
+	  .ds-right{
+		  padding: 0;
+		  width: 260px;
+	  }
+	}
+} 
+
+/* ----- TEAM ----- */
+.view-team{
+	.views-row{
+		.clearfix{}
+		float: left;
+		width: 45%;
+		margin: 0 2%;
+		height: 315px;
+		
+	}
+}
+
+/*------ PROJECT LIST ------*/
+#region-content{
+  .view-bellisimo-projects{
+    .views-row{
+      width: 25%;	    
+    }
+  }
+}
+.page-taxonomy-term{
+  .region-content{
+    .node-projects{
+      width: 25%;
+      height: 100%;
+    }
+  }
+}
+
+/*--- FLEX SLIDER ---*/
+.flex-caption{
+  height: 70px;
+	font-size: 14px;
+	line-height: 18px;
+}
+
+
+/*FLEX NAVIGATION*/
+.flex-direction-nav li a{
+	top: 45%;
+}
+    /*-- CONTACT --*/
+form{
+	label{
+		float: left;
+		display: block;
+		width: 110px;
+		clear: both;
+		text-align: right;
+		padding: 0 10px 0 0 ;
+		font-size: 12px;
+	}
+	input, textarea{
+		width: auto;
+	}
+  .form-textarea-wrapper textarea{
+	  width: auto;
+  }
+}
+
+#webform-client-form-18{
+	margin: 0 0 0 70px;
+	input[type="submit"]{
+		margin: 0 0 0 120px;
+	}
+}

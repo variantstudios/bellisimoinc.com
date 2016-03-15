@@ -1,0 +1,10 @@
+name = jQuery AJAX Load
+description = API for loading content using jQuery Load.
+package = jQuery Load
+core = 7.x
+; Information added by drupal.org packaging script on 2013-09-30
+version = "7.x-1.x-dev"
+core = "7.x"
+project = "jquery_ajax_load"
+datestamp = "1380583955"
+

@@ -1,0 +1,15 @@
+#bellisimo-content-container {
+	background: none;
+}
+#block-system-main .content-wrapper {
+	background: none !important;
+}
+
+.image-left {
+width: 48%;
+float: left;
+}
+.image-right {
+width: 48%;
+float: right;
+}

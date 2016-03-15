@@ -1,0 +1,90 @@
+/* This file will hold styles for the mobile version of your website (mobile first). */
+/* This also can include ANY global CSS that applies site-wide. Unless overwritten by a more specific style rule, CSS declarations in global.css will apply site-wide. */
+
+/* ------------ VARIABLES ----------- */
+$darkerred: #210007; //bottom footer bg
+$darkred: #42000f; //top footer bg
+$red: #7e0825; //page title bg?
+$brightred: #990123; // top footer titles, bottom footer text
+$gray: #3f3f3f; // text paragraphs
+
+$redbar: #9e032b; // red for the bars
+
+body,html{
+	/*background:#f8f7f1 url('../images/header-images/wahoo.jpg') no-repeat center top;*/
+	background:#f8f7f1;
+}
+
+/* ------------ HEADER SECTION ----------- */
+#section-header{
+	background:rgba(255,255,255,0.9);
+	height: 90px;
+	border-bottom: $redbar solid 5px;
+}
+
+/* ------------ CONTENT SECTION ----------- */
+section#section-content{
+	margin: 420px 0 20px;
+	#zone-content{
+		padding: 0 0 10px 0;
+		background: #fff;
+		color: $gray;
+		-webkit-box-shadow: 1px 0px 5px rgba(50,50,50,0.5);
+		-moz-box-shadow: 1px 0px 5px rgba(50,50,50,0.5);
+		box-shadow: 1px 0px 5px rgba(50,50,50,0.5);
+	}
+}
+
+/* ------------ FOOTER SECTION ----------- */
+#zone-postscript-wrapper{
+	background: #42000f;
+	color: #990123
+}
+#zone-footer-wrapper{
+	background:#210007;
+	color:#990123;
+	.site-by{
+		text-align:right;
+	}
+
+}
+
+.breadcrumb{
+	display: none;
+}
+
+.ds-header {
+   background: none repeat scroll 0 0 $redbar;
+    margin: 0 -10px !important;
+    padding: 0 !important;
+    width: 100% !important;
+    h2{
+    	padding: 10px 0px 0px 20px;
+    }
+}
+
+/* ------------ MAIN MENU ----------- */
+ul.nice-menu{
+	float: right;
+	margin: 30px;
+	a{
+		padding: 0.3em 5px;
+		text-align: center;
+		min-width: 70px;
+		max-width: 100px;
+		background: none;
+	}
+	li{
+		border: none;
+		background: none;
+		a{
+			background: none;
+			&hover{
+				background: none;
+			}
+		}
+	}
+	
+}
+
+

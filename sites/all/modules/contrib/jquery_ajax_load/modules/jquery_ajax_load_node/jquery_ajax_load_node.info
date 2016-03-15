@@ -1,0 +1,11 @@
+name = jQuery AJAX Load Node
+description = Loads nodes under JQuery AJAX load view mode.
+package = jQuery Load
+dependencies[] = jquery_ajax_load
+core = 7.x
+; Information added by drupal.org packaging script on 2013-09-30
+version = "7.x-1.x-dev"
+core = "7.x"
+project = "jquery_ajax_load"
+datestamp = "1380583955"
+

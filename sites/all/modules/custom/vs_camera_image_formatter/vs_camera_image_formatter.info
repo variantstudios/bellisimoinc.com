@@ -1,0 +1,5 @@
+name = VS Custom Camera Image Formatter
+description = "Add a formatter to help the images show properly for the Camera gallery."
+package = Fields
+core = 7.x
+files[] = vs_camera_image_formatter.module

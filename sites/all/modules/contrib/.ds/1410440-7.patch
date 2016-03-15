@@ -1,0 +1,35 @@
+diff --git a/ds.module b/ds.module
+index b23b5c4..e961669 100644
+--- a/ds.module
++++ b/ds.module
+@@ -792,7 +792,7 @@ function ds_field_attach_view_alter(&$build, $context) {
+  * This function is added in ds_theme_registry_alter().
+  */
+ function ds_entity_variables(&$vars) {
+-  if (isset($vars['elements']) && $layout = ds_get_layout($vars['elements']['#entity_type'], $vars['elements']['#bundle'], $vars['elements']['#view_mode'])) {
++  if (isset($vars['elements']) && isset($vars['elements']['#bundle']) && $layout = ds_get_layout($vars['elements']['#entity_type'], $vars['elements']['#bundle'], $vars['elements']['#view_mode'])) {
+ 
+     // Do not render panel layouts.
+     if (!empty($layout['settings']['ds_panels'])) {
+diff --git a/modules/ds_extras/ds_extras.module b/modules/ds_extras/ds_extras.module
+index fe5ba40..17c6303 100644
+--- a/modules/ds_extras/ds_extras.module
++++ b/modules/ds_extras/ds_extras.module
+@@ -874,7 +874,7 @@ function ds_extras_entity_view_alter(&$build, $entity_type) {
+ 
+   // If views and core doesn't send information along on the entity,
+   // Display suite doesn't have a context to render the layout.
+-  if (!isset($build['#entity_type']) && !isset($build['#bundle'])) {
++  if (!isset($build['#entity_type']) || !isset($build['#bundle'])) {
+     return;
+   }
+ 
+@@ -919,7 +919,7 @@ function ds_extras_entity_view_alter(&$build, $entity_type) {
+ function ds_extras_render_panel_layout(&$vars) {
+   static $displays = array();
+ 
+-  if (isset($vars['elements']) && $layout = ds_get_layout($vars['elements']['#entity_type'], $vars['elements']['#bundle'], $vars['elements']['#view_mode'])) {
++  if (isset($vars['elements']) && isset($vars['elements']['#bundle']) && $layout = ds_get_layout($vars['elements']['#entity_type'], $vars['elements']['#bundle'], $vars['elements']['#view_mode'])) {
+ 
+     if (empty($layout['settings']['ds_panels'])) {
+       return;

@@ -1,0 +1,181 @@
+/* This file will hold styles that are loaded using the same media query as the narrow grid. */
+/* If you are using the default media queries provided by Omega, these styles will also
+ *  apply to the normal and widescreen layouts. You may override these styles in the normal 
+ *  and widescreen CSS files as appropriate. */
+
+/* ----- MENU ----- */
+#zone-header-wrapper{
+	height: 120px;
+}
+
+ul.nice-menu{
+  float: right;
+	padding: 0;
+	font-size: 12px;
+	li{
+	  float: left;
+	  font-size: 12px;
+	  span { font-size: 12px; }
+		a{	
+			font-size: 12px;
+			padding: 5px 5px;
+			text-align: center;
+	  }
+		
+		ul{
+			font-size: 12px;
+			margin: 0;
+	  }
+	}
+}
+
+/*--
+ul.nice-menu{
+  float: right;
+	padding: 50px 0 0 0;
+	li{
+	  float: left;
+		a{	
+			font-size: 12px;
+			padding: 5px 8px;
+			text-align: center;
+	  }
+		
+		ul{
+			margin: 0;
+	  }
+	}
+}
+*/
+
+/*----- Header Font Size ------*/
+.ds-header {
+  margin: 0 -10px !important;
+  padding: 0 !important;
+  h2{
+	  font-size: 36px;
+  }
+}
+.term-listing-heading,
+.view-header{
+	h2{
+		font-size: 36px;
+	}
+}
+
+/*-----Featured Header Tag-----*/
+.view-mode-featured_project{
+	.ds-header:after{
+		right: 50px;
+	}
+	.ds-right{
+		clear: none;
+	}
+}
+.ds-right{
+		clear: none;
+	}
+/*----- CONTENT -----*/
+/*This is for the dividing line on layouts with both a left and right column.*/
+#block-system-main{
+	.content-wrapper{
+		background: url(../images/content-border.png) repeat-y;
+		background-position: 500px 0;
+		clear: both;
+		float: left;
+		margin: 40px 0 0;
+	}
+}
+
+/* ----- TEAM ----- */
+.view-team{
+	.views-row{
+		.clearfix{}
+		
+	}
+}
+
+/*Removes the margin at the top of the left column to accomidate the seperation line between left and right columns.*/
+section#section-content {
+  #zone-content{
+	  .ds-left{
+      margin: 0 0 0 28px;	
+      padding: 0 40px 0 0;
+	  }
+	  .ds-right{
+		  padding: 0;
+		  width: 180px;
+	  }
+	}
+} 
+.node-type-webform{
+  section#section-content{
+    #zone-content{
+	    .ds-left{
+		    margin: 0 0 0 28px;	
+        padding: 0 40px 0 0;
+	    }
+	  }
+	}
+}
+/*--- FLEX SLIDER ---*/
+.flex-caption{
+	font-size: 10px;
+	line-height: 14px;
+}
+
+    /*-- PROJECTS --*/
+#region-content{
+  .view-bellisimo-projects{
+	  .views-row{
+      width: 40%;
+      margin: 0 0 40px 4.5%;		
+    }
+	}
+}
+
+.page-taxonomy-term{
+  .region-content{
+    .node-projects{
+      width: 40%;
+      height: 100%;
+      margin: 0 0 40px 4.5%; 	
+      padding: 0 10px 10px;
+    }
+  }
+}
+/*FLEX CAPTION*/
+.flex-caption{
+  position: relative;
+  height: 60px;	
+}
+/*FLEX NAVIGATION*/
+.flex-direction-nav li a{
+	top: 39%;
+}
+
+/*----- FOOTER -----*/
+/*Re-aligning the site credits to the left and right. Removeing the centered styling for each of the blocks.*/
+#region-footer-first{
+  .block{
+    text-align: left;	  
+  }
+}
+#region-footer-second {
+  p.site-by{
+    margin: auto;
+    width: auto;	  
+  }
+}
+
+/* CONTENT INSERT IMAGES */
+.node-projects,
+.node-page{
+	.content-wrapper{
+		.ds-left{
+			.adaptive-image{
+				margin: 10px;
+			}
+		}
+	}
+}

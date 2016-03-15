@@ -1,0 +1,36 @@
+<?php
+// $Id: vs_site_by.module Exp $
+ 
+/**
+ * Implementation of hook_block_info().
+ */
+function vs_site_by_block_info() {
+  $blocks['my-block-id'] = array(
+    'info' => t('Website Credit'),
+  );
+  return $blocks;
+}
+ 
+/**
+ * Implementation of hook_block_view().
+ */
+function vs_site_by_block_view($delta='') {
+  $block = array();
+  switch ($delta) {
+    case 'my-block-id':
+      $block['subject'] = t('Website Credit');
+      $block['content'] = vs_site_by_contents();
+      break;
+  }
+  return $block;
+}
+ 
+/**
+ * custom html block
+ * @return string
+ */
+function vs_site_by_contents() {
+  return '
+    <p class="site-by"><a class="hide-text" href="https://www.variantstudios.com" target="_blank">Fort Collins Web Design by Variant Studios</a></p>
+  ';
+}
